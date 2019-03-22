@@ -4,7 +4,7 @@ require_relative('../db/sql_runner.rb')
 class PreciousThing
 
   attr_reader :id
-  attr_accessor :name, :description, :stock_quantity, :buying_cost, :selling_price
+  attr_accessor :name, :description, :stock_quantity, :buying_cost, :selling_price, :source_id
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
@@ -12,13 +12,13 @@ class PreciousThing
     @stock_quantity = options['stock_quantity'].to_i
     @buying_cost = options['buying_cost'].to_i
     @selling_price = options['selling_price'].to_i
-    # @source_id = options['source_id'].to_i
+    @source_id = options['source_id'].to_i
    end
 
    def save()
-    sql = 'INSERT INTO precious_things (name, description, stock_quantity, buying_cost, selling_price)
-            VALUES ($1, $2, $3, $4, $5) RETURNING *'
-    values = [@name, @description, @stock_quantity, @buying_cost, @selling_price]
+    sql = 'INSERT INTO precious_things (name, description, stock_quantity, buying_cost, selling_price, source_id)
+            VALUES ($1, $2, $3, $4, $5, $6) RETURNING *'
+    values = [@name, @description, @stock_quantity, @buying_cost, @selling_price, @source_id]
     preciosa = SqlRunner.run(sql, values)
     @id = preciosa.first()['id'].to_i
    end
@@ -43,9 +43,9 @@ class PreciousThing
 
    def update()
      sql = 'UPDATE precious_things
-            SET (name, description, stock_quantity, buying_cost, selling_price) = ($1, $2, $3, $4, $5)
-            WHERE id = $6'
-    values = [@name, @description, @stock_quantity, @buying_cost, @selling_price, @id]
+            SET (name, description, stock_quantity, buying_cost, selling_price, source_id) = ($1, $2, $3, $4, $5, $6)
+            WHERE id = $7'
+    values = [@name, @description, @stock_quantity, @buying_cost, @selling_price, @source_id, @id]
     SqlRunner.run(sql, values)
    end
 
