@@ -23,5 +23,10 @@ class PreciousThing
     @id = preciosa.first()['id'].to_i
    end
 
+   def self.delete_all()
+     sql = 'DELETE FROM precious_things'
+     SqlRunner.run(sql)
+   end
 
+   
 end

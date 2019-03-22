@@ -2,6 +2,7 @@ require_relative('../models/precious_thing.rb')
 require_relative('../models/source.rb')
 require('pry')
 
+PreciousThing.delete_all
 
 precious_thing1 = PreciousThing.new({
   "name" => "snow globe",
@@ -13,7 +14,7 @@ precious_thing1 = PreciousThing.new({
 
 precious_thing2 = PreciousThing.new({
   "name" => "hand of glory",
-  "description" => "A severed human hand, gripping an oil lamp. Shows light only to the person holding the arm.",
+  "description" => "A locally sourced severed human hand, gripping an oil lamp. Shows light only to the person holding the arm.",
   "stock_quantity" => 1,
   "buying_cost" => 1,
   "selling_price" => 30
