@@ -36,7 +36,8 @@ precious_thing3.save()
 # precious_thing1.delete()
 # PreciousThing.all()
 # precious_thing1.name = ("map")
-# precious_thing1.update()
+# # precious_thing1.update()
+# PreciousThing.find(2)
 
 binding.pry
 nil

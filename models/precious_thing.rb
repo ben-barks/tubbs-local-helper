@@ -36,7 +36,9 @@ class PreciousThing
 
    def self.all()
      sql = 'SELECT * FROM precious_things'
-     SqlRunner.run(sql)
+     precious_things = SqlRunner.run(sql)
+     result = precious_things.map { |prec| PreciousThing.new(prec) }
+     return result
    end
 
    def update()
@@ -45,6 +47,13 @@ class PreciousThing
             WHERE id = $6'
     values = [@name, @description, @stock_quantity, @buying_cost, @selling_price, @id]
     SqlRunner.run(sql, values)
+   end
+
+   def self.find(id)
+     sql = 'SELECT * FROM precious_things WHERE id = $1'
+     values = [id]
+     precious_hashes = SqlRunner.run(sql, values).first
+     return PreciousThing.new(precious_hashes)
    end
 
 end
