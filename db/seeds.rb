@@ -2,7 +2,8 @@ require_relative('../models/precious_thing.rb')
 require_relative('../models/source.rb')
 require('pry')
 
-PreciousThing.delete_all
+Source.delete_all()
+PreciousThing.delete_all()
 
 precious_thing1 = PreciousThing.new({
   "name" => "snow globe",
@@ -57,6 +58,8 @@ source3.save()
 # precious_thing1.name = ("map")
 # # precious_thing1.update()
 # PreciousThing.find(2)
+
+source1.delete()
 
 binding.pry
 nil

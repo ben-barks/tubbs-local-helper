@@ -19,6 +19,17 @@ class Source
    @id = source.first()['id'].to_i
   end
 
+  def self.delete_all()
+    sql = 'DELETE FROM sources'
+    SqlRunner.run(sql)
+  end
+
+  def delete()
+    sql = 'DELETE FROM sources WHERE id = $1'
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
 
 
 
