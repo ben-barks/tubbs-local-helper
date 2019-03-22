@@ -11,7 +11,13 @@ class Source
     @description = options['description']
   end
 
-  
+  def save()
+   sql = 'INSERT INTO sources (name, description)
+           VALUES ($1, $2) RETURNING *'
+   values = [@name, @description]
+   source = SqlRunner.run(sql, values)
+   @id = source.first()['id'].to_i
+  end
 
 
 

@@ -33,6 +33,25 @@ precious_thing2.save()
 precious_thing3.save()
 
 
+source1 = Source.new({
+  "name" => "Non-local corpse",
+  "description" => "We didn't burn him!"
+  })
+
+source2 = Source.new({
+  "name" => "The attic",
+  "description" => "David is such a creative boy, but be careful not to suffocate like the first three wives!"
+  })
+
+source3 = Source.new({
+  "name" => "Royston Vasey new road dig site",
+  "description" => "Such precious things under all that dirt!"
+  })
+
+source1.save()
+source2.save()
+source3.save()
+
 # precious_thing1.delete()
 # PreciousThing.all()
 # precious_thing1.name = ("map")
