@@ -13,7 +13,6 @@ class PreciousThing
     @buying_cost = options['buying_cost'].to_i
     @selling_price = options['selling_price'].to_i
     @source_id = options['source_id'].to_i
-    @stock_warning = []
    end
 
    def save()
