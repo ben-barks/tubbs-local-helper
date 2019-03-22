@@ -13,6 +13,7 @@ class PreciousThing
     @buying_cost = options['buying_cost'].to_i
     @selling_price = options['selling_price'].to_i
     @source_id = options['source_id'].to_i
+    @stock_warning = []
    end
 
    def save()
@@ -54,6 +55,14 @@ class PreciousThing
      values = [id]
      precious_hashes = SqlRunner.run(sql, values).first
      return PreciousThing.new(precious_hashes)
+   end
+
+   def stock_warning()
+     if @stock_quantity < 2
+       return "Just the one precious remains!"
+     elsif @stock_quantity == 0
+       return "Send Andrew for more precious things"
+     end
    end
 
 end
