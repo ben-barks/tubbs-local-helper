@@ -2,7 +2,7 @@
   <% @all_precious_things.each do |precious_thing| %>
 
   <div class="precious-thing">
-    <h3><a href="/a-local-shop/<%= precious_thing.id %> <%= precious_thing.name %></a></h3>
+    <h3><a href="/a-local-shop/<%= precious_thing.id %>"> <%= precious_thing.name %></a></h3>
     <p>Description: <%= precious_thing.description %></p>
     <p>Stock: <%= precious_thing.stock_quantity %> <%= precious_thing.stock_warning %></p>
     <p>Buying cost(in human lives): <%= precious_thing.buying_cost %></p>
