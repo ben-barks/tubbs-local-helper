@@ -45,7 +45,12 @@ class Source
    SqlRunner.run(sql, values)
   end
 
-
+  def self.find(id)
+    sql = 'SELECT * FROM sources WHERE id = $1'
+    values = [id]
+    source_hashes = SqlRunner.run(sql, values).first
+    return Source.new(source_hashes)
+  end
 
 
 

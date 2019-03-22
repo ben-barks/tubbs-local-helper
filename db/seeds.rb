@@ -63,6 +63,7 @@ source3.save()
 # Source.all()
 # source1.name = ("not local")
 # source1.update()
+# Source.find(19)
 
 binding.pry
 nil
