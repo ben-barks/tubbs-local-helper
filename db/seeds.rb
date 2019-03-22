@@ -34,7 +34,7 @@ precious_thing3.save()
 
 
 # precious_thing1.delete()
-
+# PreciousThing.all()
 
 binding.pry
 nil

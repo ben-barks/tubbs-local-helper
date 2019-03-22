@@ -33,4 +33,11 @@ class PreciousThing
      values = [@id]
      SqlRunner.run(sql, values)
    end
+
+   def self.all()
+     sql = 'SELECT * FROM precious_things'
+     SqlRunner.run(sql)
+   end
+
+   
 end
