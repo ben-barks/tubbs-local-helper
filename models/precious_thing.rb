@@ -1,5 +1,7 @@
 require_relative('./source.rb')
 
+attr_reader :id, :description, :stock_quantity, :buying_cost, :selling_price
+
 class PreciousThing
 
   def initialize(options)
@@ -16,7 +18,7 @@ class PreciousThing
             VALUES ($1, $2, $3, $4) RETURNING *'
     values = [@description, @stock_quantity, @buying_cost, @selling_price]
     preciosa = SqlRunner.run(sql, values)
-    @id = preciosa.first()['id'].to_i         
+    @id = preciosa.first()['id'].to_i
    end
 
 
