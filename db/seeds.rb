@@ -59,7 +59,8 @@ source3.save()
 # # precious_thing1.update()
 # PreciousThing.find(2)
 
-source1.delete()
+# source1.delete()
+Source.all()
 
 binding.pry
 nil

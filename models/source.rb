@@ -30,6 +30,13 @@ class Source
     SqlRunner.run(sql, values)
   end
 
+  def self.all()
+    sql = 'SELECT * FROM sources'
+    sources = SqlRunner.run(sql)
+    result = sources.map { |prec| Source.new(prec) }
+    return result
+  end
+
 
 
 
