@@ -33,6 +33,8 @@ precious_thing2.save()
 precious_thing3.save()
 
 
+# precious_thing1.delete()
+
 
 binding.pry
 nil

@@ -28,5 +28,9 @@ class PreciousThing
      SqlRunner.run(sql)
    end
 
-   
+   def delete()
+     sql = 'DELETE FROM precious_things WHERE id = $1'
+     values = [@id]
+     SqlRunner.run(sql, values)
+   end
 end
