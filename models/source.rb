@@ -37,6 +37,14 @@ class Source
     return result
   end
 
+  def update()
+    sql = 'UPDATE sources
+           SET (name, description) = ($1, $2)
+           WHERE id = $3'
+   values = [@name, @description, @id]
+   SqlRunner.run(sql, values)
+  end
+
 
 
 

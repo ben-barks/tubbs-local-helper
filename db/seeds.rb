@@ -60,7 +60,9 @@ source3.save()
 # PreciousThing.find(2)
 
 # source1.delete()
-Source.all()
+# Source.all()
+# source1.name = ("not local")
+# source1.update()
 
 binding.pry
 nil
