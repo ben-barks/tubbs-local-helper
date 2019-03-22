@@ -3,8 +3,8 @@ require_relative('../db/sql_runner.rb')
 
 class PreciousThing
 
-  attr_reader :id, :name, :description, :stock_quantity, :buying_cost, :selling_price
-
+  attr_reader :id
+  attr_accessor :name, :description, :stock_quantity, :buying_cost, :selling_price
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
@@ -39,5 +39,12 @@ class PreciousThing
      SqlRunner.run(sql)
    end
 
-   
+   def update()
+     sql = 'UPDATE precious_things
+            SET (name, description, stock_quantity, buying_cost, selling_price) = ($1, $2, $3, $4, $5)
+            WHERE id = $6'
+    values = [@name, @description, @stock_quantity, @buying_cost, @selling_price, @id]
+    SqlRunner.run(sql, values)
+   end
+
 end
