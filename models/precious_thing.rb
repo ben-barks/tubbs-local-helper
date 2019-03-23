@@ -1,11 +1,12 @@
-require_relative('./source.rb')
 # require_relative('./combined.rb')
 require_relative('../db/sql_runner.rb')
+require_relative('./source.rb')
 
 class PreciousThing
 
   attr_reader :id
   attr_accessor :name, :description, :stock_quantity, :buying_cost, :selling_price, :source_id
+
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
