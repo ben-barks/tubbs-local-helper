@@ -17,8 +17,12 @@ get '/a-local-shop/new' do #new
   erb(:"precious_things/new")
 end
 
+get '/a-local-shop/:id' do #show
+  @all_precious_things = PreciousThing.find(params[:id])
+end
+
 post '/a-local-shop' do #create
   @all_precious_things = PreciousThing.new(params)
   @all_precious_things.save()
-  redirect to("/a-local-shop")
+  erb(:"precious_things/create")
 end

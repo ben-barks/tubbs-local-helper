@@ -2,10 +2,10 @@
   <p> Edward fetched a new precious! </p>
 
   <div class="form">
-    <form action="/a-local-shop/" method="post">
+    <form action="/a-local-shop" method="post">
       <fieldset>
       <label for="name"><legend>Precious thing:</legend></label>
-        <input type="text" name="name" id="name" placeholder="precious thing">
+        <input type="text" name="name" id="name" placeholder="what shall we call it?">
 
         <label for="description"><legend>Description: </legend></label>
              <input type="text" name="description" id="description" placeholder="what's it like?"/>
@@ -17,7 +17,7 @@
              <input type="number" name="buying_cost" id="buying_cost" placeholder="how many died for it?"/>
 
              <label for="selling-price"><legend>Selling price: </legend></label>
-             <input type="number" name="selling_price" id="selling_price" placeholder="How much is it?"/>
+             <input type="number" name="selling_price" id="selling_price" placeholder="how much is it?"/>
 
              <label for="source-id">
                <legend>Source: </legend>
@@ -27,8 +27,9 @@
                  <% end %>
                </select>
              </label>
-
-             <legend><input class="btn btn--action" type="submit" value="Make precious"></legend>
+             <br>
+             <br>
+             <input type="submit" value="Make precious">
              </fieldset>
            </form>
          </div>
