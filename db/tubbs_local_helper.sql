@@ -19,10 +19,7 @@ CREATE TABLE precious_things(
 );
 
 CREATE TABLE combined(
-  precious_name VARCHAR(255) REFERENCES precious_things(name) ON DELETE CASCADE,
-  precious_description VARCHAR(255) REFERENCES precious_things(description) ON DELETE CASCADE,
-  precious_stock INT4 REFERENCES precious_things(stock_quantity) ON DELETE CASCADE,
-  precious_cost INT4 REFERENCES precious_things(buying_cost) ON DELETE CASCADE,
-  precious_price INT4 REFERENCES precious_things(selling_price) ON DELETE CASCADE,
-  source_name VARCHAR(255) REFERENCES sources(name) ON DELETE CASCADE
+  id SERIAL4 PRIMARY KEY,
+  precious_things_id INT4 REFERENCES precious_things(id) ON DELETE CASCADE,
+  source_id INT4 REFERENCES sources(id) ON DELETE CASCADE
 );
