@@ -1,0 +1,60 @@
+<form method="post" action="/a-local-shop/<%= @all_precious_things.id %>">
+  <label for="name-field">Name: </label>
+  <input
+  type="text"
+  name="name"
+  id="name-field"
+  value="<%= @all_precious_things.name %>"
+  />
+
+  <label for="description-field">Description: </label>
+  <input
+  type="text"
+  name="description"
+  id="description-field"
+  value="<%= @all_precious_things.description %>"
+  />
+
+  <label for="stock-field">Stock: </label>
+  <input
+  type="number"
+  name="stock_quantity"
+  id="stock-field"
+  value="<%= @all_precious_things.stock_quantity() %>"
+  />
+
+  <label for="cost-field">Buying cost: </label>
+  <input
+  type="number"
+  name="buying_cost"
+  id="cost-field"
+  value="<%= @all_precious_things.buying_cost() %>"
+  />
+
+  <label for="price-field">Selling price: </label>
+  <input
+  type="number"
+  name="selling_price"
+  id="price-field"
+  value="<%= @all_precious_things.selling_price() %>"
+  />
+
+  <label for="source-selection">Source:</label>
+  <select name="source" id="source-selection">
+  <option
+  value="<%= source.id %>"
+  <%= "selected" if @all_sources.name == "Non-local corpse" %>
+  >Non-local corpse</option>
+  <option
+  value="<%= source.id %>"
+  <%= "selected" if @all_sources.name == "The attic" %>
+  >The attic</option>
+  <option
+  value="<%= source.id %>"
+  <%= "selected" if @all_sources.name == "Royston Vasey new road dig site" %>
+  >Royston Vasey new road dig site</option>
+</select>
+
+
+  <input type='submit' value="Change this precious">
+</form>
