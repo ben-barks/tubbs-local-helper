@@ -42,16 +42,16 @@
   <label for="source-selection">Source:</label>
   <select name="source" id="source-selection">
   <option
-  value="<%= source.id %>"
-  <%= "selected" if @all_sources.name == "Non-local corpse" %>
+  value="<%= @all_precious_things.source_id %>"
+  <%= "selected" if @all_precious_things.source_id == 1 %>
   >Non-local corpse</option>
   <option
-  value="<%= source.id %>"
-  <%= "selected" if @all_sources.name == "The attic" %>
+  value="<%= @all_precious_things.source_id %>"
+  <%= "selected" if @all_precious_things.source_id == 2 %>
   >The attic</option>
   <option
-  value="<%= source.id %>"
-  <%= "selected" if @all_sources.name == "Royston Vasey new road dig site" %>
+  value="<%= @all_precious_things.source_id %>"
+  <%= "selected" if @all_precious_things.source_id == 3 %>
   >Royston Vasey new road dig site</option>
 </select>
 
