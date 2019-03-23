@@ -8,3 +8,7 @@ get '/a-local-shop' do
   @all_precious_things = PreciousThing.all()
   erb(:index)
 end
+
+get '/a-local-shop' do
+  erb(:new)
+end
