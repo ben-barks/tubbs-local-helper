@@ -26,3 +26,8 @@ post '/a-local-shop' do #create
   @all_precious_things.save()
   erb(:"precious_things/create")
 end
+
+get '/a-local-shop/:id/edit' do #edit
+  @all_precious_things = PreciousThing.find(params[:id])
+  erb(:"precious_things/edit")
+end

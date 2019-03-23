@@ -1,4 +1,4 @@
-DROP TABLE combined;
+-- DROP TABLE combined;
 DROP TABLE precious_things;
 DROP TABLE sources;
 
@@ -17,9 +17,9 @@ CREATE TABLE precious_things(
   selling_price INT4,
   source_id INT4 REFERENCES sources(id) ON DELETE CASCADE
 );
-
-CREATE TABLE combined(
-  id SERIAL4 PRIMARY KEY,
-  precious_things_id INT4 REFERENCES precious_things(id) ON DELETE CASCADE,
-  source_id INT4 REFERENCES sources(id) ON DELETE CASCADE
-);
+--
+-- CREATE TABLE combined(
+--   id SERIAL4 PRIMARY KEY,
+--   precious_things_id INT4 REFERENCES precious_things(id) ON DELETE CASCADE,
+--   source_id INT4 REFERENCES sources(id) ON DELETE CASCADE
+-- );

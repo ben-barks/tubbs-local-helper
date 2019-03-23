@@ -1,7 +1,9 @@
+# require_relative('../models/combined.rb')
 require_relative('../models/precious_thing.rb')
 require_relative('../models/source.rb')
 require('pry')
 
+# Combined.delete_all()
 Source.delete_all()
 PreciousThing.delete_all()
 
@@ -126,6 +128,10 @@ precious_thing7.save()
 precious_thing8.save()
 precious_thing9.save()
 precious_thing10.save()
+
+
+
+
 
 
 # precious_thing1.delete()
