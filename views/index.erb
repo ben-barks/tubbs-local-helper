@@ -1,14 +1,26 @@
+
+
+
+<table style="width:100%">
+  <tr>
+    <th>Precious things: </th>
+    <th>Description: </th>
+    <th>Stock: </th>
+    <th>Buying cost(in human lives): </th>
+    <th>Selling price(in human lives): </th>
+    <th>Which source it came from: </th>
+  </tr>
+</table>
 <div id="precious-things-wrapper">
   <% @all_precious_things.each do |precious_thing| %>
-
-  <div class="precious-thing">
-    <h3><%= precious_thing.name %></h3>
-    <p>Description: <%= precious_thing.description %></p>
-    <p>Stock: <%= precious_thing.stock_quantity %> <%= precious_thing.stock_warning %></p>
-    <p>Buying cost(in human lives): <%= precious_thing.buying_cost %></p>
-    <p>Selling price(in human lives): <%= precious_thing.selling_price %></p>
-    <p>Which source it came from: <%= precious_thing.source_id %></p>
-  </div>
-
-  <% end %>
+<table style="width:100%">
+  <tr>
+    <td><%= precious_thing.name %></td>
+    <td><%= precious_thing.description %></td>
+    <td><%= precious_thing.stock_quantity %> <%= precious_thing.stock_warning %></td>
+    <td><%= precious_thing.selling_price %></td>
+    <td><%= precious_thing.source_id %></td>
+  </tr>
+</table>
+<% end %>
 </div>

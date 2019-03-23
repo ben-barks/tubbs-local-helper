@@ -57,7 +57,7 @@ class PreciousThing
    end
 
    def stock_warning()
-     if @stock_quantity < 2
+     if @stock_quantity < 2 && @stock_quantity > 0
        return "  -  Just the one precious remains!"
      elsif @stock_quantity == 0
        return "  -  Send Andrew for more precious things"
