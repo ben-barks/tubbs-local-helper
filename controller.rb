@@ -9,6 +9,6 @@ get '/a-local-shop' do
   erb(:index)
 end
 
-get '/a-local-shop' do
+get '/a-local-shop/new' do
   erb(:new)
 end
