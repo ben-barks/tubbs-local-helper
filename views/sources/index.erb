@@ -1,0 +1,17 @@
+<table style="table-layout:fixed; width:100%">
+  <tr>
+    <th>Sources: </th>
+    <th>Description: </th>
+  </tr>
+</table>
+
+<div id="sources-wrapper">
+  <% @sources.each do |source| %>
+<table style="text-align: center; table-layout: fixed; width:100%">
+  <tr>
+    <td><%= source.name %></td>
+    <td><%= source.description %></td>
+  </tr>
+</table>
+<% end %>
+</div>
