@@ -63,7 +63,7 @@ precious_thing4 = PreciousThing.new({
 })
 
 precious_thing5 = PreciousThing.new({
-  "name" => "Finger abacus",
+  "name" => "finger abacus",
   "description" => "A simple abacus, using human fingers as beads for counting.",
   "stock_quantity" => 5,
   "buying_cost" => 13,
@@ -72,7 +72,7 @@ precious_thing5 = PreciousThing.new({
 })
 
 precious_thing6 = PreciousThing.new({
-  "name" => "Wedding dress",
+  "name" => "wedding dress",
   "description" => "Stained, off-white rags with faded blood stains. Stitched in to one of the rags is the name Tubbs Tattsyrup.",
   "stock_quantity" => 1,
   "buying_cost" => 5,
@@ -81,7 +81,7 @@ precious_thing6 = PreciousThing.new({
 })
 
 precious_thing7 = PreciousThing.new({
-  "name" => "Mobile phone",
+  "name" => "mobile phone",
   "description" => "Handheld cellular device, locked, out of battery charge. Encased in dry mud.",
   "stock_quantity" => 25,
   "buying_cost" => 25,

@@ -4,15 +4,21 @@ require_relative('../models/precious_thing.rb')
 require_relative('../models/source.rb')
 also_reload('../models/*')
 
-set :views, Proc.new { File.join(root, "../views/precious_things") }
+set :views, Proc.new { File.join(root, "../views") }
 
-get '/a-local-shop' do
+get '/a-local-shop' do #index
   @all_precious_things = PreciousThing.all()
-  erb(:index)
+  erb(:"precious_things/index")
 end
 
-get '/a-local-shop/new' do
+get '/a-local-shop/new' do #new
   @all_precious_things = PreciousThing.all()
   @all_sources = Source.all()
-  erb(:new)
+  erb(:"precious_things/new")
+end
+
+post '/a-local-shop' do #create
+  @all_precious_things = PreciousThing.new(params)
+  @all_precious_things.save()
+  redirect to("/a-local-shop")
 end
