@@ -11,6 +11,11 @@ get '/a-local-shop' do #index
   erb(:"precious_things/index")
 end
 
+get '/a-local-shop/main' do
+  @all = PreciousThing.main_index()
+  erb(:"precious_things/main")
+end
+
 get '/a-local-shop/new' do #new
   @all_precious_things = PreciousThing.all()
   @all_sources = Source.all()

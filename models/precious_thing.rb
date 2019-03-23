@@ -66,4 +66,15 @@ class PreciousThing
      end
    end
 
+   def self.main_index()
+     sql = 'SELECT sources.name, precious_things.name, precious_things.description, precious_things.stock_quantity, precious_things.buying_cost, precious_things.selling_price FROM sources
+          INNER JOIN precious_things
+          ON precious_things.source_id = sources.id
+          ORDER BY sources.id
+          WHERE sources.id= $1'
+    values = [@sources_id]
+    result = SqlRunner.run(sql, values)
+    return result
+   end
+
 end
