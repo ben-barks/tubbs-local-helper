@@ -1,7 +1,4 @@
-
-
-
-<table style="width:100%">
+<table style="table-layout:fixed; width:100%">
   <tr>
     <th>Precious things: </th>
     <th>Description: </th>
@@ -11,13 +8,15 @@
     <th>Which source it came from: </th>
   </tr>
 </table>
+
 <div id="precious-things-wrapper">
   <% @all_precious_things.each do |precious_thing| %>
-<table style="width:100%">
+<table style="text-align: center; table-layout: fixed; width:100%">
   <tr>
     <td><%= precious_thing.name %></td>
     <td><%= precious_thing.description %></td>
     <td><%= precious_thing.stock_quantity %> <%= precious_thing.stock_warning %></td>
+    <td><%= precious_thing.buying_cost %></td>
     <td><%= precious_thing.selling_price %></td>
     <td><%= precious_thing.source_id %></td>
   </tr>
