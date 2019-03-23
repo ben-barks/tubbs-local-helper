@@ -1,4 +1,5 @@
 require_relative('./source.rb')
+require_relative('./combined.rb')
 require_relative('../db/sql_runner.rb')
 
 class PreciousThing
