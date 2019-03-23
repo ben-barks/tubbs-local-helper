@@ -14,3 +14,6 @@ MVP functionality includes tables for inventory and sources, CRUD functions for 
 markers.
 
 CSS and extensions to be added later.
+
+- Font in PUBLIC -> original font did not work, google font applied
+- MISC folder holds notes, diagrams, supporting data not required for app running
