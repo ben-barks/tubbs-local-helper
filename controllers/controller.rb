@@ -12,5 +12,7 @@ get '/a-local-shop' do
 end
 
 get '/a-local-shop/new' do
+  @all_precious_things = PreciousThing.all()
+  @all_sources = Source.all()
   erb(:new)
 end

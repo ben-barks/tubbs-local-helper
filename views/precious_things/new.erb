@@ -3,35 +3,33 @@
 
   <div class="form">
     <form action="/a-local-shop/" method="post">
-      <label for="name">Precious thing:</label>
+      <fieldset>
+      <label for="name"><legend>Precious thing:</legend></label>
         <input type="text" name="name" id="name" placeholder="precious thing">
 
-        <label for="description">Description:</label>
+        <label for="description"><legend>Description: </legend></label>
              <input type="text" name="description" id="description" placeholder="what's it like?"/>
 
-             <label for="stock-quantity">Stock:</label>
+             <label for="stock-quantity"><legend>Stock: </legend></label>
              <input type="number" name="stock_quantity" id="stock_quantity" placeholder="how many?"/>
 
-             <label for="buying-cost">Buying cost:</label>
+             <label for="buying-cost"><legend>Buying cost: </legend></label>
              <input type="number" name="buying_cost" id="buying_cost" placeholder="how many died for it?"/>
 
-             <label for="selling-price">Selling price:</label>
+             <label for="selling-price"><legend>Selling price: </legend></label>
              <input type="number" name="selling_price" id="selling_price" placeholder="How much is it?"/>
 
-------------------------------
-
              <label for="source-id">
-               Source:
+               <legend>Source: </legend>
                <select class="dropdown" name="source_id" id="source">
-                 <% for source in @all_precious_things %>
-                 <option value="<%= source.source_id %>"><%= source.name %></option>
+                 <% for source in @all_sources %>
+                 <option value="<%= source.id %>"><%= source.name %></option>
                  <% end %>
                </select>
              </label>
 
--------------------------------
-
-             <input type="submit" value="Make precious">
+             <legend><input class="btn btn--action" type="submit" value="Make precious"></legend>
+             </fieldset>
            </form>
          </div>
         </div>
