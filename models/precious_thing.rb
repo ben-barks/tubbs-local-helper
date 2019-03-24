@@ -57,7 +57,7 @@ class PreciousThing
             SET (name, description, stock_quantity, buying_cost, selling_price, source_id) = ($1, $2, $3, $4, $5, $6)
             WHERE id = $7'
     values = [@name, @description, @stock_quantity, @buying_cost, @selling_price, @source_id, @id]
-    return SqlRunner.run(sql, values)
+    SqlRunner.run(sql, values)
    end
 
    def self.find(id)

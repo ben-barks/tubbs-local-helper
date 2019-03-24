@@ -1,7 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+/* @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light'); */
 
 * {
   font-family: 'Shadows Into Light', cursive;
   font-style: normal;
   font-size: 100%;
-};
+}
+
+img {
+align-items: center;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
