@@ -22,7 +22,7 @@ class PreciousThing
           FULL JOIN precious_things
           ON precious_things.source_id = sources.id
           ORDER BY sources.id'
-    indexed = SqlRunner.run(sql).map { |index| index.to_s }
+    indexed = SqlRunner.run(sql).map { |index| index }
     return indexed
    end
 

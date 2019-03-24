@@ -1,8 +1,28 @@
-<div class="home">
-  <% @al_things.each do |thing| %>
 <table style="table-layout:fixed; width:100%">
-<tr><td> <%= thing.name %> </td>
-</tr>
+  <tr>
+    <th>Precious things: </th>
+    <th>Description: </th>
+    <th>Stock: </th>
+    <th>Buying cost(in human lives): </th>
+    <th>Which source it came from: </th>
+  </tr>
+</table>
+
+<div id="home-wrapper">
+  <% @all_precious_things.each do |precious_thing| %>
+<table style="text-align: center; table-layout: fixed; width:100%">
+  <tr>
+    <td><a href="/a-local-shop/<%= precious_thing.id %>"><%= precious_thing.name %></td>
+    <td><%= precious_thing.description %></td>
+    <td><%= precious_thing.stock_quantity %> <%= precious_thing.stock_warning %></td>
+    <td><%= precious_thing.buying_cost %></td>
+
+  <% @all_sources.each do |source| %>
+    <% if precious_thing.source_id == source.id %>
+    <td> <%= source.name %> </td>
+    <%end%>
+  <%end%>
+  </tr>
 </table>
   <% end %>
 </div>
