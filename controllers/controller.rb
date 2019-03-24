@@ -17,14 +17,15 @@ get '/a-local-shop/new' do #new
   erb(:"precious_things/new")
 end
 
-get '/a-local-shop/:id' do #show
-  @all_precious_things = PreciousThing.find(params['id'].to_i)
-end
-
 post '/a-local-shop' do #create
   @all_precious_things = PreciousThing.new(params)
   @all_precious_things.save()
   erb(:"precious_things/create")
+end
+
+get '/a-local-shop/:id' do #show
+  @all_precious_things = PreciousThing.find(params['id'].to_i)
+  erb(:"precious_things/show")
 end
 
 get '/a-local-shop/:id/edit' do #edit
@@ -35,5 +36,11 @@ end
 post '/a-local-shop/:id' do #update
   @all_precious_things = PreciousThing.new(params)
   @all_precious_things.update()
+  redirect to "/a-local-shop/#{params['id']}"
+end
+
+post '/a-local-shop/:id/delete' do #delete
+  @all_precious_things = PreciousThing.find(params['id'])
+  @all_precious_things.delete()
   redirect to '/a-local-shop'
 end
