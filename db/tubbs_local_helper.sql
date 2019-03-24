@@ -23,3 +23,7 @@ CREATE TABLE precious_things(
 --   precious_things_id INT4 REFERENCES precious_things(id) ON DELETE CASCADE,
 --   source_id INT4 REFERENCES sources(id) ON DELETE CASCADE
 -- );
+-- SELECT sources.name, precious_things.name, precious_things.description, precious_things.stock_quantity, precious_things.buying_cost, precious_things.selling_price FROM sources
+-- INNER JOIN precious_things
+-- ON precious_things.source_id = sources.id
+-- ORDER BY sources.id

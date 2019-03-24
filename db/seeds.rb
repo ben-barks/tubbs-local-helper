@@ -129,7 +129,7 @@ precious_thing8.save()
 precious_thing9.save()
 precious_thing10.save()
 
-
+# PreciousThing.main_index()
 
 
 
