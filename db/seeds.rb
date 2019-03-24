@@ -66,7 +66,7 @@ precious_thing4 = PreciousThing.new({
 
 precious_thing5 = PreciousThing.new({
   "name" => "finger abacus",
-  "description" => "A simple abacus, using human fingers as beads for counting.",
+  "description" => "A simple abacus, with human fingers as beads for counting.",
   "stock_quantity" => 5,
   "buying_cost" => 13,
   "selling_price" => 85,
@@ -129,7 +129,7 @@ precious_thing8.save()
 precious_thing9.save()
 precious_thing10.save()
 
-# PreciousThing.main_index()
+PreciousThing.main_index()
 
 
 

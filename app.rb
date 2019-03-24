@@ -4,6 +4,13 @@ require_relative('controllers/controller.rb')
 require_relative('controllers/source_controller.rb')
 also_reload('models/*')
 
-get '/a-local-shop/home' do
+set :views, Proc.new { File.join(root, "views") }
+
+get '/' do
+  @all_things = PreciousThing.all() + Source.all()
+  # @all_things.main_index()
+  # for thing in @all_things
+  #   things = thing.main_index().map { |thing| return thing.to_s }
+  # end
   erb( :index )
 end

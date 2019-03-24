@@ -1,8 +1,6 @@
 <div class="home">
 <table style="table-layout:fixed; width:100%">
-<% for thing in @all_precious_things %>
-<tr><td><%= thing.main_index %></td>
+<tr><td> <%= @all_things.main_index() %> </td>
 </tr>
-<%end%>
 </table>
 </div>

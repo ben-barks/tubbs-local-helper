@@ -17,6 +17,15 @@ class PreciousThing
     @source_id = options['source_id'].to_i
    end
 
+   def main_index()
+     sql = 'SELECT sources.name, precious_things.name, precious_things.description, precious_things.stock_quantity, precious_things.buying_cost, precious_things.selling_price FROM sources
+          FULL JOIN precious_things
+          ON precious_things.source_id = sources.id
+          ORDER BY sources.id'
+    indexed = SqlRunner.run(sql).map { |index| index.to_s }
+    return indexed
+   end
+
    def save()
     sql = 'INSERT INTO precious_things (name, description, stock_quantity, buying_cost, selling_price, source_id)
             VALUES ($1, $2, $3, $4, $5, $6) RETURNING *'
@@ -48,7 +57,7 @@ class PreciousThing
             SET (name, description, stock_quantity, buying_cost, selling_price, source_id) = ($1, $2, $3, $4, $5, $6)
             WHERE id = $7'
     values = [@name, @description, @stock_quantity, @buying_cost, @selling_price, @source_id, @id]
-    SqlRunner.run(sql, values)
+    return SqlRunner.run(sql, values)
    end
 
    def self.find(id)
@@ -66,13 +75,6 @@ class PreciousThing
      end
    end
 
-   def main_index()
-     sql = 'SELECT sources.name, precious_things.name, precious_things.description, precious_things.stock_quantity, precious_things.buying_cost, precious_things.selling_price FROM sources
-          INNER JOIN precious_things
-          ON precious_things.source_id = sources.id
-          ORDER BY sources.id'
-    result = SqlRunner.run(sql, values)
-    return result
-   end
+
 
 end

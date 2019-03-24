@@ -34,8 +34,7 @@ get '/a-local-shop/:id/edit' do #edit
 end
 
 post '/a-local-shop/:id' do #update
-  @all_precious_things = PreciousThing.new(params)
-  @all_precious_things.update()
+  PreciousThing.new(params).update()
   redirect to "/a-local-shop/#{params['id']}"
 end
 
