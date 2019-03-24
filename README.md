@@ -15,7 +15,9 @@ markers.
 
 CSS and extensions to be added later.
 
-- Font in PUBLIC -> original font did not work, google font applied
+UPDATE:
+
+- Font in PUBLIC -> original font did not work, google font applied and added to PUBLIC
 - MISC folder holds notes, diagrams, supporting data not required for app running
 
 additional functionality to be added 
@@ -30,18 +32,18 @@ additional functionality to be added
 
 
 
-UPDATE: CRUD/Restful functions complete on Alpha, show and index on Beta; 
+UPDATE: index, create, show, update, destroy functions complete on Alpha, show and index on Beta; 
 
-  css reset operational - if disabled, external font works as well.
+  css reset operational - if disabled, external font works as well;
   
-  app.rb created to combine controllers
+  app.rb created to combine controllers;
   
-  homepage created with combined table information
+  homepage created with combined table information;
   
-  navbar added
+  functional navbar and "banner" added;
   
-  entry names linked to allow editing and deletion
+  entry names linked to allow editing and deletion;
   
-  /source/show lists all inventory items specific to them
+  /source/show lists all inventory items specific to them;
   
   
