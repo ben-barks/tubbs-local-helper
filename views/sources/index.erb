@@ -9,7 +9,7 @@
   <% @all_sources.each do |source| %>
 <table style="text-align: center; table-layout: fixed; width:100%">
   <tr>
-    <td><%= source.name %></td>
+    <td><a href="/sources/<%=source.id%>"><%=source.name%></td>
     <td><%= source.description %></td>
   </tr>
 </table>
