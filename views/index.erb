@@ -1,6 +1,8 @@
 <div class="home">
+  <% @al_things.each do |thing| %>
 <table style="table-layout:fixed; width:100%">
-<tr><td> <%= @all_things.main_index() %> </td>
+<tr><td> <%= thing.name %> </td>
 </tr>
 </table>
+  <% end %>
 </div>
