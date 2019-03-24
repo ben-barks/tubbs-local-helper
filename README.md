@@ -19,7 +19,27 @@ CSS and extensions to be added later.
 - MISC folder holds notes, diagrams, supporting data not required for app running
 
 additional functionality to be added 
+
 --> third table for overall index with full join on the tables
+
 --> index & create & update & destroy routes for both tables
+
 --> potential staff_bios page for flair
+
 --> some css to make it look less grim
+
+
+
+UPDATE: CRUD/Restful functions complete on Alpha, show and index on Beta; 
+
+  css reset operational - if disabled, external font works as well.
+  
+  app.rb created to combine controllers
+  
+  homepage created with combined table information
+  
+  navbar added
+  
+  entry names linked to allow editing and deletion
+  
+  
