@@ -13,7 +13,7 @@
   <% @all_precious_things.each do |precious_thing| %>
 <table style="text-align: center; table-layout: fixed; width:100%">
   <tr>
-    <td><%= precious_thing.name %></td>
+    <td><a href="/a-local-shop/<%= precious_thing.id %>"><%= precious_thing.name %></td>
     <td><%= precious_thing.description %></td>
     <td><%= precious_thing.stock_quantity %> <%= precious_thing.stock_warning %></td>
     <td><%= precious_thing.buying_cost %></td>
