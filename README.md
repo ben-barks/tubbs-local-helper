@@ -42,4 +42,6 @@ UPDATE: CRUD/Restful functions complete on Alpha, show and index on Beta;
   
   entry names linked to allow editing and deletion
   
+  /source/show lists all inventory items specific to them
+  
   
