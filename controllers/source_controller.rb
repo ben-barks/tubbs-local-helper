@@ -12,6 +12,7 @@ get '/sources' do #index
 end
 
 get '/sources/:id' do #show
+  @all_precious_things = PreciousThing.all()
   @all_sources = Source.find(params['id'].to_i)
   erb(:"sources/show")
 end
