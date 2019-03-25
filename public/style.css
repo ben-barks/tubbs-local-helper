@@ -21,17 +21,20 @@ th {
 }
 
 body {
-  background-image: url(https://png.pngtree.com/element_pic/00/16/06/12575d0608a912a.jpg);
-  background-repeat: no-repeat;
-  background: #75726B;
-  background: -moz-linear-gradient(left, #75726B 0%, #BAAB82 100%, #6B3375 100%);
-  background: -webkit-linear-gradient(left, #75726B 0%, #BAAB82 100%, #6B3375 100%);
+  /* background-image: url(https://www.psdgraphics.com/file/old-paper-texture.jpg);
+  background-size: cover;
+  background-position: center; */
+    /* url(https://png.pngtree.com/element_pic/00/16/06/12575d0608a912a.jpg) top right no-repeat, */
+    background: #E9D362;
+    background: -moz-linear-gradient(left, #E9D362 0%, #333333 100%, #9E9587 100%);
+    background: -webkit-linear-gradient(left, #E9D362 0%, #333333 100%, #9E9587 100%);
+    background: linear-gradient(to right, #E9D362 0%, #333333 100%, #9E9587 100%);
   width: 70%;
   margin: auto;
 }
 
 a {
-  color: #650E07;
+  color: #400000;
 }
 
 #menu {
@@ -79,7 +82,7 @@ h2 {
 h2 a {
   font-weight: 700;
   text-transform: uppercase;
-  color: #650E07;
+  color: #E54900;
   text-decoration: none;
 }
 
@@ -114,30 +117,32 @@ table td, table th {
 
 /* Background-color of the odd rows */
 table tr:nth-child(odd) {
-	background-color: #75726B;
+	background-color: #676859;
 }
 
 /* Background-color of the even rows */
 table tr:nth-child(even) {
-	  background-color: #BAAB82;
+	  background-color: #616152;
 }
 
 table th {
   opacity: 1;
 }
 
-table td:first-child { color: #650E07; }
+table td:first-child { color: #2D1D0F; }
 
 table tr:hover {
-   background-color: #202427;
+  opacity: 1;
+   /* background-color: #684C37; */
 -webkit-box-shadow: 0 6px 6px -6px #111520;
 	   -moz-box-shadow: 0 6px 6px -6px #111520;
 	        box-shadow: 0 6px 6px -6px #111520;
 }
 
 table td:hover {
-  background-color: #202427;
-  color: #650E07;
+  opacity: 1;
+  /* background-color: #684C37; */
+  color: #400000;
   font-weight: bold;
   font-size: 125%;
 
@@ -164,4 +169,8 @@ text-align: center;
   align-content: center;
   display:flex;
 /* something for centering the list */
+}
+
+.bloodstain {
+  align-content: flex-end;
 }
