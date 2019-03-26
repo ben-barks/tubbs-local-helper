@@ -14,10 +14,14 @@
   <tbody>
   <% @precious.each do |thing| %>
   <tr>
-    <td><a href="/a-local-shop/<%= thing['id'] %>"><%= thing['precious_thing_name'] %></td>
+    <td> <%= thing['precious_thing_name'] %></td>
     <td> <%= thing['source_name'] %> </td>
   </tr>
   <% end %>
   </tbody>
 </table>
+</div>
+
+<div id="tea_wrapper">
+  <img class="tea" src="https://www.onlygfx.com/wp-content/uploads/2016/05/cup-coffee-stain-6.png" alt="tea stain">
 </div>
