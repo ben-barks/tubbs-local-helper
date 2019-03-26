@@ -20,7 +20,7 @@ UPDATE:
 - Font in PUBLIC -> original font did not work, google font applied and added to PUBLIC
 - MISC folder holds notes, diagrams, supporting data not required for app running
 
-additional functionality to be added 
+additional functionality to be added: 
 
 --> third table for overall index with full join on the tables
 
@@ -32,7 +32,9 @@ additional functionality to be added
 
 
 
-UPDATE: index, create, show, update, destroy functions complete on Alpha, show and index on Beta; 
+UPDATE: 
+
+  index, create, show, update, destroy functions complete on Alpha, show and index on Beta; 
 
   css reset operational - if disabled, external font works as well;
   
@@ -45,5 +47,19 @@ UPDATE: index, create, show, update, destroy functions complete on Alpha, show a
   entry names linked to allow editing and deletion;
   
   /source/show lists all inventory items specific to them;
+  
+  
+  UPDATE: 
+  
+  - functionality complete with operational update route
+  
+  - combined table on homepage refactored with postgreSQL, code looking way more handsome
+  
+  - after conversation with the UX specialist, CSS binned and restarted with a more user-friendly aim
+  
+  - homepage sufficiently reorganized, less repetition between tables
+  
+  - parts yet to complete: all-site CSS design, cutting off excess code & comments, flair page, color-coding stock warning
+  
   
   
