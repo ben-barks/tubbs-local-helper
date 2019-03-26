@@ -209,27 +209,79 @@ ul {
   width: 410px;
   height: 530px;
   position: relative;
-  top: 500px;
+  top: 450px;
   left:500px;
 }
 
 .home_table {
+  background-color: #D9D3BE;
   width: 20%;
   position: absolute;
-  top: 750px;
-  left: 1000px;  
+  top: 600px;
+  left: 1000px;
 }
 
 .home_table th {
-  font-weight: bold;
+  background-color: #514431;
+  color: #C0C0C0;
 }
 
 .home_table th, td {
-  padding-bottom: 1%;
-  padding-top: 1%;
-  padding-left:1%;
-  margin: auto;
+  text-align: left;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+  padding-left:0.5em;
   -webkit-box-shadow: 0 2px 2px -2px #0E1119;
      -moz-box-shadow: 0 2px 2px -2px #0E1119;
           box-shadow: 0 2px 2px -2px #0E1119;
 }
+
+.home_table td {
+  border-spacing: 3em 3em;
+}
+
+tbody tr:nth-child(2n){
+  background-color: #817150;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 0;
+  opacity: 0.8;
+}
+
+html {
+  background-image: url(https://img.freepik.com/free-vector/damask-seamless-pattern-background_1217-821.jpg?size=338&ext=jpg);
+  background-repeat: repeat;
+
+}
+
+a {
+  color: #006400;
+}
+
+.menu {
+  background-color: #4d402c 0.9;
+  font-family: 'Shadows Into Light';
+  font-size: 120%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  box-shadow: 0 0 10px 0 black;
+}
+
+.menu * {
+  display:inline;
+}
+
+.menu li {
+  margin: 20px;
+}
+
+.menu li a {
+  text-decoration: none;
