@@ -1,13 +1,11 @@
 
 <h1><%= @all_sources.name %></h1>
-
+<br>
 <h2>Description: <%= @all_sources.description  %></h2>
-
-<h2>Precious things: </h2>
+<br>
+<h2 class="source_list">Precious things: </h2>
 <% @all_precious_things.each do |precious| %>
 <% if precious.source_id == @all_sources.id %>
     <ul class="ul"> <li><%= precious.name %></li></ul>
   <%end%>
 <%end%>
-<br>
-<br>

@@ -1,6 +1,8 @@
 # require_relative('./combined.rb')
 require_relative('../db/sql_runner.rb')
 require_relative('./source.rb')
+require('pry')
+
 
 class PreciousThing
 
@@ -17,12 +19,12 @@ class PreciousThing
     @source_id = options['source_id'].to_i
    end
 
-   def main_index()
-     sql = 'SELECT sources.name, precious_things.name, precious_things.description, precious_things.stock_quantity, precious_things.buying_cost, precious_things.selling_price FROM sources
+   def self.main_index()
+     sql = 'SELECT sources.name AS source_name, precious_things.name AS precious_thing_name, precious_things.description, precious_things.stock_quantity, precious_things.buying_cost, precious_things.selling_price FROM sources
           FULL JOIN precious_things
           ON precious_things.source_id = sources.id
           ORDER BY sources.id'
-    indexed = SqlRunner.run(sql).map { |index| index }
+    indexed = SqlRunner.run(sql)
     return indexed
    end
 
@@ -57,7 +59,7 @@ class PreciousThing
             SET (name, description, stock_quantity, buying_cost, selling_price, source_id) = ($1, $2, $3, $4, $5, $6)
             WHERE id = $7'
     values = [@name, @description, @stock_quantity, @buying_cost, @selling_price, @source_id, @id]
-    SqlRunner.run(sql, values)
+    return SqlRunner.run(sql, values)
    end
 
    def self.find(id)

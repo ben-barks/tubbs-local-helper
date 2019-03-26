@@ -1,6 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light'); */
-
-html, body {
+/* html, body {
   font-family: 'Shadows Into Light', cursive;
   font-size: 100%;
 }
@@ -21,14 +19,10 @@ th {
 }
 
 body {
-  /* background-image: url(https://www.psdgraphics.com/file/old-paper-texture.jpg);
-  background-size: cover;
-  background-position: center; */
-    /* url(https://png.pngtree.com/element_pic/00/16/06/12575d0608a912a.jpg) top right no-repeat, */
-    background: #E9D362;
-    background: -moz-linear-gradient(left, #E9D362 0%, #333333 100%, #9E9587 100%);
-    background: -webkit-linear-gradient(left, #E9D362 0%, #333333 100%, #9E9587 100%);
-    background: linear-gradient(to right, #E9D362 0%, #333333 100%, #9E9587 100%);
+  background: #FEF4C0;
+  background: -moz-linear-gradient(left, #FEF4C0 0%, #908884 100%, #9E9587 100%);
+  background: -webkit-linear-gradient(left, #FEF4C0 0%, #908884 100%, #9E9587 100%);
+  background: linear-gradient(to right, #FEF4C0 0%, #908884 100%, #9E9587 100%);
   width: 70%;
   margin: auto;
 }
@@ -102,47 +96,43 @@ table td {
 
 table {
 	text-align: left;
-	overflow: hidden;
+	overflow:auto;
 	width: 80%;
 	margin: 0 auto;
   display: table;
   padding: 0 0 0 0;
+  position: relative;
 }
 
 table td, table th {
-	padding-bottom: 2%;
-	padding-top: 2%;
-  padding-left:2%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+  padding-left:1%;
 }
 
-/* Background-color of the odd rows */
 table tr:nth-child(odd) {
-	background-color: #676859;
+	background-color: #CAAD96;
 }
 
-/* Background-color of the even rows */
 table tr:nth-child(even) {
-	  background-color: #616152;
+	  background-color: #CAAD96;
 }
 
 table th {
-  opacity: 1;
+  font-weight: bolder;
 }
 
 table td:first-child { color: #2D1D0F; }
 
 table tr:hover {
-  opacity: 1;
-   /* background-color: #684C37; */
+  background-color: #D9B298;
 -webkit-box-shadow: 0 6px 6px -6px #111520;
 	   -moz-box-shadow: 0 6px 6px -6px #111520;
 	        box-shadow: 0 6px 6px -6px #111520;
 }
 
 table td:hover {
-  opacity: 1;
-  /* background-color: #684C37; */
-  color: #400000;
+  background-color: #D9B298;
   font-weight: bold;
   font-size: 125%;
 
@@ -168,9 +158,61 @@ text-align: center;
 .ul {
   align-content: center;
   display:flex;
-/* something for centering the list */
 }
 
-.bloodstain {
-  align-content: flex-end;
+#bloodstain {
+  position: absolute;
+  left: 0px;
+  top: 500px;
+  z-index: -1;
 }
+
+#tea {
+  height:400px;
+  width:400px;
+  position: absolute;
+  left: 1000px;
+  top: 1500px;
+  z-index: -1;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+}
+
+.source_list {
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+
+.button {
+
+} */
+
+.note_container {
+  position: relative;
+  text-align: center;
+  color: white;
+
+.note_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* .note {
+  height: 530px;
+  width: 410px;
+  position: absolute;
+  top: 500px;
+  left: 500px;
+} */
+
+/* .home_table {
+  width: 30%;
+  position:absolute;
+  margin-top:500px;
+  margin-left:900px;
+} */
