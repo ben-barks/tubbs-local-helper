@@ -1,196 +1,3 @@
-/* html, body {
-  font-family: 'Shadows Into Light', cursive;
-  font-size: 100%;
-}
-
-.image {
-  border-radius: 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.title {
-  border-top: 5px;
-}
-
-th {
-  font-weight: bold;
-}
-
-body {
-  background: #FEF4C0;
-  background: -moz-linear-gradient(left, #FEF4C0 0%, #908884 100%, #9E9587 100%);
-  background: -webkit-linear-gradient(left, #FEF4C0 0%, #908884 100%, #9E9587 100%);
-  background: linear-gradient(to right, #FEF4C0 0%, #908884 100%, #9E9587 100%);
-  width: 70%;
-  margin: auto;
-}
-
-a {
-  color: #400000;
-}
-
-#menu {
-    opacity: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 0 10px 0 black;
-}
-
-#menu * {
-  display: inline;
-}
-
-#menu li {
-  margin: 20px;
-}
-
-#menu li a {
-  color: black;
-  text-decoration: none;
-}
-
-
-h1 {
-  font-size:3em;
-  font-weight: 300;
-  line-height:1em;
-  text-align: center;
-}
-
-h2 {
-  font-size:1em;
-  font-weight: 300;
-  text-align: center;
-  display: block;
-  line-height:1em;
-  padding-bottom: 2em;
-}
-
-h2 a {
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #E54900;
-  text-decoration: none;
-}
-
-table th h1 {
-	font-weight: bold;
-	font-size: 1em;
-  text-align: left;
-}
-
-table td {
-	font-weight: normal;
-	font-size: 1em;
-  -webkit-box-shadow: 0 2px 2px -2px #0E1119;
-	   -moz-box-shadow: 0 2px 2px -2px #0E1119;
-	        box-shadow: 0 2px 2px -2px #0E1119;
-}
-
-table {
-	text-align: left;
-	overflow:auto;
-	width: 80%;
-	margin: 0 auto;
-  display: table;
-  padding: 0 0 0 0;
-  position: relative;
-}
-
-table td, table th {
-	padding-bottom: 1%;
-	padding-top: 1%;
-  padding-left:1%;
-}
-
-table tr:nth-child(odd) {
-	background-color: #CAAD96;
-}
-
-table tr:nth-child(even) {
-	  background-color: #CAAD96;
-}
-
-table th {
-  font-weight: bolder;
-}
-
-table td:first-child { color: #2D1D0F; }
-
-table tr:hover {
-  background-color: #D9B298;
--webkit-box-shadow: 0 6px 6px -6px #111520;
-	   -moz-box-shadow: 0 6px 6px -6px #111520;
-	        box-shadow: 0 6px 6px -6px #111520;
-}
-
-table td:hover {
-  background-color: #D9B298;
-  font-weight: bold;
-  font-size: 125%;
-
-  box-shadow: #111520 -1px 1px, #111520 -2px 2px, #111520 -3px 3px, #111520 -4px 4px, #111520 -5px 5px, #111520 -6px 6px;
-  transform: translate3d(6px, -6px, 0);
-
-  transition-delay: 0s;
-	transition-duration: 0.4s;
-	transition-property: all;
-  transition-timing-function: line;
-}
-
-form {
-display: table;
-margin:auto;
-text-align: table;
-}
-
-#new {
-text-align: center;
-}
-
-.ul {
-  align-content: center;
-  display:flex;
-}
-
-#bloodstain {
-  position: absolute;
-  left: 0px;
-  top: 500px;
-  z-index: -1;
-}
-
-#tea {
-  height:400px;
-  width:400px;
-  position: absolute;
-  left: 1000px;
-  top: 1500px;
-  z-index: -1;
-}
-
-ul {
-  display: flex;
-  justify-content: center;
-}
-
-.source_list {
-  font-size: 1.5em;
-  font-weight: bolder;
-}
-
-.button {
-
-} */
-/* ------------------------------------------------------- */
-
 .tea {
   height:400px;
   width:400px;
@@ -268,6 +75,22 @@ html {
 
 a {
   color: #006400;
+}
+
+.precious_table {
+  table-layout:fixed;
+  border: 1px solid black;
+  width: 80%;
+  align-content: center;
+}
+
+h1 {
+  padding: 80px;
+  font-family: 'Shadows Into Light', cursive;
+  text-align: center;
+  font-weight: bold;
+  font-size: 300%
+
 }
 
 .menu {

@@ -1,25 +1,28 @@
-<table style="table-layout:fixed; width:100%">
-  <tr>
-    <th>Precious things: </th>
-    <th>Description: </th>
-    <th>Stock: </th>
-    <th>Buying cost(in human lives): </th>
-    <th>Selling price: </th>
-    <th>Which source it came from: </th>
-  </tr>
-</table>
+<h1>Tubbs's Precious things</h1>
+<div class="precious_table">
+  <table class="precious_index">
+    <thead>
+    <tr>
+      <th>Precious things: </th>
+      <th class="description">Description: </th>
+      <th>Stock: </th>
+      <th>Buying cost(in human lives): </th>
+      <th>Selling price: </th>
+      <th>Which source it came from: </th>
+    </tr>
+    </thead>
 
-<div id="precious-things-wrapper">
-  <% @all_precious_things.each do |precious_thing| %>
-<table style="text-align: center; table-layout: fixed; width:100%">
-  <tr>
-    <td><a href="/a-local-shop/<%= precious_thing.id %>"><%= precious_thing.name %></td>
-    <td><%= precious_thing.description %></td>
-    <td><%= precious_thing.stock_quantity %> <%= precious_thing.stock_warning %></td>
-    <td><%= precious_thing.buying_cost %></td>
-    <td><%= precious_thing.selling_price %></td>
-    <td><%= precious_thing.source_id %></td>
-  </tr>
-</table>
-  <% end %>
+    <tbody>
+    <% @all_precious_things.each do |precious_thing| %>
+    <tr>
+      <td><a href="/a-local-shop/<%=precious_thing.id%>"><%= precious_thing.name %></td>
+      <td><%= precious_thing.description %></td>
+      <td><%= precious_thing.stock_quantity %> <%= precious_thing.stock_warning %></td>
+      <td><%= precious_thing.buying_cost %></td>
+      <td><%= precious_thing.selling_price %></td>
+      <td><%= precious_thing.source_id %></td>
+    </tr>
+    </tbody>
+    <% end %>
+  </table>
 </div>
