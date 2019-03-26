@@ -1,25 +1,23 @@
-<div class="note_container"
-  <img src="http://hanatemplate.com/images/old-lined-paper-7.png" alt="stack of notes">
-  <div class="note_text">Local Inventory</div>
+<div class="note_container">
+  <h2>Local Inventory</h2>
 </div>
 
 <div class="home_table">
 <table style="table-layout:fixed; width:100%">
+  <thead>
   <tr>
     <th>Precious things: </th>
     <th>Which source it came from: </th>
   </tr>
-</table>
+  </thead>
 
-
-<div id="home-wrapper">
+  <tbody>
   <% @precious.each do |thing| %>
-<table style="text-align: center; table-layout: fixed; width:100%">
   <tr>
     <td><a href="/a-local-shop/<%= thing['id'] %>"><%= thing['precious_thing_name'] %></td>
     <td> <%= thing['source_name'] %> </td>
   </tr>
-</table>
   <% end %>
-</div>
+  </tbody>
+</table>
 </div>
