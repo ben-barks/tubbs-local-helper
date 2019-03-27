@@ -32,19 +32,29 @@
 }
 
 .home_table {
-  background-color: #D9D3BE;
+  background-color: rgba(217,211,190,0.5);
   width: 20%;
+  height:83%;
   position: absolute;
-  top: 400px;
+  top: 300px;
   left: 800px;
+  line-height: 23px;
+}
+
+thead {
+  font-weight: bold;
+  font-family:monospace;
+  background-color: rgba(244,222,192,0.5);
 }
 
 .home_table, .source_index th {
-  background-color: #857E70;
-  color: #DED3BC;
+  /* background-color: rgba(244,222,192,0.5); */
+  color: black;
+  padding-bottom: 0.5em;
 }
 
 .home_table, .source_index th, td {
+  font-family:monospace;
   text-align: left;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
@@ -60,7 +70,7 @@
 }
 
 tbody tr:nth-child(2n){
-  background-color: #817150;
+  background-color: rgba(244,222,192,0.5);
 }
 
 .banner {
@@ -78,11 +88,12 @@ html {
 
 a {
   color: #006400;
+  font-size: 130%;
 }
 
 .source_index_wrapper{
   font-size: 150%;
-  background-color: #DED3BC;
+  background-color: rgba(254,249,233, 0.7);
   width: 80%;
   position: absolute;
   top: 200px;
@@ -161,7 +172,7 @@ ul.precious_show {
 img.bloodstain {
   position: absolute;
   left: 0;
-  top: 950px;
+  top: 1000px;
   z-index: -1;
 }
 
@@ -200,7 +211,7 @@ img.bloodstain {
 }
 
 .precious_index tr:nth-child(odd) {
-	background-color: #fef9e9;
+	background-color: rgba(254,249,233,0.6);
 }
 
 .precious_index tr:nth-child(even) {
@@ -208,7 +219,7 @@ img.bloodstain {
 }
 
 .precious_index th {
-	background-color: #DED3BC;
+	background-color: rgba(222,211,188,0.7);
 }
 
 .precious_index td:first-child { color: #FB667A; }
