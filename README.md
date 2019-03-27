@@ -62,4 +62,21 @@ UPDATE:
   - parts yet to complete: all-site CSS design, cutting off excess code & comments, flair page, color-coding stock warning
   
   
+  UPDATE:
+  
+  + styling complete, brushed off clutter from the pages for a cleaner look
+  
+  + table variation in design added for less repetition
+  
+  + turned homepage table into navigation links for ease of access
+  
+  + excess code and comments removed
+  
+  + file system reorganised 
+  
+  + font updated
+  
+  + notes to be uploaded, presentation to complete
+  
+  
   
