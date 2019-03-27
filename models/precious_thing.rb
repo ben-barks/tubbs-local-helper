@@ -28,7 +28,7 @@ class PreciousThing
    end
 
    def self.main_index()
-     sql = 'SELECT sources.name AS source_name, precious_things.name AS precious_thing_name, precious_things.description, precious_things.stock_quantity, precious_things.buying_cost, precious_things.selling_price FROM sources
+     sql = 'SELECT sources.id AS source_id, sources.name AS source_name, precious_things.id AS precious_thing_id, precious_things.name AS precious_thing_name, precious_things.description, precious_things.stock_quantity, precious_things.buying_cost, precious_things.selling_price FROM sources
           FULL JOIN precious_things
           ON precious_things.source_id = sources.id
           ORDER BY sources.id'

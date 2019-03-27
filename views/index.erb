@@ -6,16 +6,16 @@
 <table style="table-layout:fixed; width:100%">
   <thead>
   <tr>
-    <th>Precious things: </th>
-    <th>Which source it came from: </th>
+    <th><a href="/a-local-shop"> Precious things: </th>
+    <th><a href="/sources"> Which source it came from: </th>
   </tr>
   </thead>
 
   <tbody>
   <% @precious.each do |thing| %>
   <tr>
-    <td> <%= thing['precious_thing_name'] %></td>
-    <td> <%= thing['source_name'] %> </td>
+    <td><a href="/a-local-shop/<%=thing['precious_thing_id']%>"> <%= thing['precious_thing_name'] %></td>
+    <td><a href="/sources/<%=thing['source_id']%>"> <%= thing['source_name'] %> </td>
   </tr>
   <% end %>
   </tbody>
