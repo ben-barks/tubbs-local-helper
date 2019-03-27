@@ -1,11 +1,14 @@
-
-<h1><%= @all_sources.name %></h1>
+<div class="source_show_wrapper">
+  <ul class="source_show">
+    <li><h2 class="source_head"><%= @all_sources.name %></h2></li>
 <br>
-<h2>Description: <%= @all_sources.description  %></h2>
+    <li><h2>DESCRIPTION: <%= @all_sources.description  %></h2></li>
 <br>
-<h2 class="source_list">Precious things: </h2>
+    <li><h2 class="source_list">PRECIOUS THINGS: </h2></li>
 <% @all_precious_things.each do |precious| %>
 <% if precious.source_id == @all_sources.id %>
-    <ul class="ul"> <li><%= precious.name %></li></ul>
+    <li><ul class="ul"> <li><%= precious.name %></li></ul></li>
   <%end%>
 <%end%>
+  </ul>
+</div>

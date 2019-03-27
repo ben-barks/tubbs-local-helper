@@ -1,3 +1,5 @@
+
+
 .tea {
   height:400px;
   width:400px;
@@ -37,22 +39,23 @@
   left: 800px;
 }
 
-.home_table th {
-  background-color: #514431;
-  color: #C0C0C0;
+.home_table, .source_index th {
+  background-color: #857E70;
+  color: #DED3BC;
 }
 
-.home_table th, td {
+.home_table, .source_index th, td {
   text-align: left;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
   padding-left:0.5em;
+  padding-right:0.5em;
   -webkit-box-shadow: 0 2px 2px -2px #0E1119;
      -moz-box-shadow: 0 2px 2px -2px #0E1119;
           box-shadow: 0 2px 2px -2px #0E1119;
 }
 
-.home_table td {
+.home_table, .source_index td {
   border-spacing: 3em 3em;
 }
 
@@ -77,6 +80,15 @@ a {
   color: #006400;
 }
 
+.source_index_wrapper{
+  font-size: 150%;
+  background-color: #DED3BC;
+  width: 80%;
+  position: absolute;
+  top: 200px;
+  left: 140px;
+}
+
 .form_wrapper {
   display: grid;
   font-family:monospace;
@@ -92,7 +104,7 @@ a {
   position: relative;
   left: 30%;
   line-height: 50px;
-}
+  }
 
 .form, .new_form {
   font-size: 20px;
@@ -222,7 +234,36 @@ img.bloodstain {
   transition-timing-function: line;
 }
 
+ul.source_show {
+  display: grid;
+  font-size: 23px;
+  font-family:monospace;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.source_show {
+  padding: 2rem 1rem;
+  display:inline-block;
+  border: 3px solid #333333;
+  font-size: 2.5rem;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  letter-spacing: 0.3ch;
+  background: #fef9e9;
+  position: relative;
+  left: 70%;
+  line-height: 50px;
+}
+
+.source_show_wrapper {
+  max-width: 40%;
+  font-size: 2.5rem;
+}
+
+.source_head {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 150%;
+}
 
 h1 {
   padding: 80px;
