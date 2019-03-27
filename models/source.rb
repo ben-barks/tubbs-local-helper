@@ -1,6 +1,5 @@
 require_relative('./precious_thing.rb')
 require_relative('../db/sql_runner.rb')
-# require_relative('./combined.rb')
 
 class Source
   attr_reader :id
@@ -52,8 +51,4 @@ class Source
     source_hashes = SqlRunner.run(sql, values).first
     return Source.new(source_hashes)
   end
-
-
-
-
 end

@@ -1,9 +1,7 @@
-# require_relative('../models/combined.rb')
 require_relative('../models/precious_thing.rb')
 require_relative('../models/source.rb')
 require('pry')
 
-# Combined.delete_all()
 Source.delete_all()
 PreciousThing.delete_all()
 
@@ -26,7 +24,6 @@ source3 = Source.new({
 source1.save()
 source2.save()
 source3.save()
-
 
 precious_thing1 = PreciousThing.new({
   "name" => "snow globe",
@@ -128,22 +125,6 @@ precious_thing7.save()
 precious_thing8.save()
 precious_thing9.save()
 precious_thing10.save()
-
-
-
-
-
-# precious_thing1.delete()
-# PreciousThing.all()
-# precious_thing1.name = ("map")
-# # precious_thing1.update()
-# PreciousThing.find(2)
-
-# source1.delete()
-# Source.all()
-# source1.name = ("not local")
-# source1.update()
-# Source.find(19)
 
 binding.pry
 nil

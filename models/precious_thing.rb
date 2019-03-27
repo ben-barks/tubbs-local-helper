@@ -1,4 +1,3 @@
-# require_relative('./combined.rb')
 require_relative('../db/sql_runner.rb')
 require_relative('./source.rb')
 require('pry')
@@ -76,9 +75,4 @@ class PreciousThing
      precious_hashes = SqlRunner.run(sql, values).first
      return PreciousThing.new(precious_hashes)
    end
-
-
-
-
-
 end
