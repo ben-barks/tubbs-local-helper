@@ -115,6 +115,33 @@ precious_thing10 = PreciousThing.new({
   "source_id" => source1.id
 })
 
+precious_thing11 = PreciousThing.new({
+  "name" => "pens",
+  "description" => "Plastic, standard grade, blue ink pens. Marked for Pauline.",
+  "stock_quantity" => 27,
+  "buying_cost" => 20,
+  "selling_price" => 84,
+  "source_id" => source1.id
+})
+
+precious_thing12 = PreciousThing.new({
+  "name" => "book",
+  "description" => "Old leather bound book, handwritten text inside. Grimoire or the original inventory.",
+  "stock_quantity" => 1,
+  "buying_cost" => 74,
+  "selling_price" => 10000,
+  "source_id" => source2.id
+})
+
+precious_thing13 = PreciousThing.new({
+  "name" => "high-vis vest",
+  "description" => "Neon green-yellow vest, size XL. Torn in places.",
+  "stock_quantity" => 3,
+  "buying_cost" => 5,
+  "selling_price" => 40,
+  "source_id" => source3.id
+})
+
 precious_thing1.save()
 precious_thing2.save()
 precious_thing3.save()
@@ -125,6 +152,9 @@ precious_thing7.save()
 precious_thing8.save()
 precious_thing9.save()
 precious_thing10.save()
+precious_thing11.save()
+precious_thing12.save()
+precious_thing13.save()
 
 binding.pry
 nil
