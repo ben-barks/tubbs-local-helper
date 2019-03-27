@@ -3,26 +3,31 @@
   <table class="precious_index">
     <thead>
     <tr>
-      <th>Precious things: </th>
-      <th class="description">Description: </th>
-      <th>Stock: </th>
-      <th>Buying cost(in human lives): </th>
-      <th>Selling price: </th>
-      <th>Which source it came from: </th>
+      <th><h3>Precious things: </h3></th>
+      <th class="description"><h3>Description: </h3></th>
+      <th><h3>Stock: </h3></th>
+      <th><h3>Buying cost(in human lives): </h3></th>
+      <th><h3>Selling price: </h3></th>
+      <th><h3>Which source it came from: </h3></th>
     </tr>
     </thead>
 
     <tbody>
-    <% @all_precious_things.each do |precious_thing| %>
-    <tr>
-      <td><a href="/a-local-shop/<%=precious_thing.id%>"><%= precious_thing.name %></td>
-      <td><%= precious_thing.description %></td>
-      <td><%= precious_thing.stock_quantity %> <%= precious_thing.stock_warning %></td>
-      <td><%= precious_thing.buying_cost %></td>
-      <td><%= precious_thing.selling_price %></td>
-      <td><%= precious_thing.source_id %></td>
-    </tr>
+      <% @all_precious_things.each do |precious_thing| %>
+      <tr>
+        <td><a href="/a-local-shop/<%=precious_thing.id%>"><%= precious_thing.name %></td>
+        <td><%= precious_thing.description %></td>
+        <td><%= precious_thing.stock_quantity %> <%= precious_thing.stock_warning %></td>
+        <td><%= precious_thing.buying_cost %></td>
+        <td><%= precious_thing.selling_price %></td>
+
+        <% @all_sources.each do |source| %>
+        <% if precious_thing.source_id == source.id %>
+        <td> <%= source.name %> </td>
+        <%end%>
+        <%end%>
+      </tr>
     </tbody>
-    <% end %>
+      <% end %>
   </table>
 </div>

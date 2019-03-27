@@ -8,6 +8,7 @@ also_reload('../models/*')
 
 get '/a-local-shop' do #index
   @all_precious_things = PreciousThing.all()
+  @all_sources = Source.all()
   erb(:"precious_things/index")
 end
 

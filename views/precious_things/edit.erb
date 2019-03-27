@@ -1,6 +1,6 @@
+<div class="form_wrapper">
 <form class="form" method="post" action="/a-local-shop/<%= @all_precious_things.id %>">
-  <fieldset>
-  <label for="name-field"><legend>Name: </legend></label>
+  <label for="name-field">Name: </label>
   <input
   type="text"
   name="name"
@@ -8,7 +8,7 @@
   value="<%= @all_precious_things.name %>"
   />
 
-  <label for="description-field"><legend>Description: </legend></label>
+  <label for="description-field">Description: </label>
   <input
   type="text"
   name="description"
@@ -16,7 +16,7 @@
   value="<%= @all_precious_things.description %>"
   />
 
-  <label for="stock-field"><legend>Stock: </legend></label>
+  <label for="stock-field">Stock: </label>
   <input
   type="number"
   name="stock_quantity"
@@ -24,7 +24,7 @@
   value="<%= @all_precious_things.stock_quantity() %>"
   />
 
-  <label for="cost-field"><legend>Buying cost: </legend></label>
+  <label for="cost-field">Buying cost: </label>
   <input
   type="number"
   name="buying_cost"
@@ -32,7 +32,7 @@
   value="<%= @all_precious_things.buying_cost() %>"
   />
 
-  <label for="price-field"><legend>Selling price: </legend></label>
+  <label for="price-field">Selling price: </label>
   <input
   type="number"
   name="selling_price"
@@ -40,7 +40,7 @@
   value="<%= @all_precious_things.selling_price() %>"
   />
 
-  <label for="source_id-selection"><legend>Source: </legend></label>
+  <label for="source_id-selection">Source: </label>
   <select name="source_id" id="source_id-selection">
   <option
   value="<%= @all_precious_things.source_id %>"
@@ -57,6 +57,6 @@
 </select>
 
 
-  <legend><input type='submit' value="Change this precious"></legend>
-  </fieldset>
+  <input type='submit' value="Change this precious">
 </form>
+</div>

@@ -19,6 +19,14 @@ class PreciousThing
     @source_id = options['source_id'].to_i
    end
 
+   def stock_warning()
+     if @stock_quantity < 2 && @stock_quantity > 0
+       return "  -  Just the one precious remains!"
+     elsif @stock_quantity == 0
+       return "  -  Send Andrew for more precious things"
+     end
+   end
+
    def self.main_index()
      sql = 'SELECT sources.name AS source_name, precious_things.name AS precious_thing_name, precious_things.description, precious_things.stock_quantity, precious_things.buying_cost, precious_things.selling_price FROM sources
           FULL JOIN precious_things
@@ -69,13 +77,7 @@ class PreciousThing
      return PreciousThing.new(precious_hashes)
    end
 
-   def stock_warning()
-     if @stock_quantity < 2 && @stock_quantity > 0
-       return "  -  Just the one precious remains!"
-     elsif @stock_quantity == 0
-       return "  -  Send Andrew for more precious things"
-     end
-   end
+
 
 
 
