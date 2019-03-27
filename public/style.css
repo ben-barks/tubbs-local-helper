@@ -77,10 +77,48 @@ a {
   color: #006400;
 }
 
+.precious_head{
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 150%;
+}
+
+ul.precious_show {
+  display: grid;
+  font-size: 23px;
+  font-family:monospace;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.precious_show {
+  padding: 2rem 1rem;
+  display:inline-block;
+  border: 3px solid #333333;
+  font-size: 2.5rem;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  letter-spacing: 0.3ch;
+  background: #fef9e9;
+  position: relative;
+  left: 70%;
+  line-height: 50px;
+}
+
+.precious_show_wrapper {
+  max-width: 40%;
+  font-size: 2.5rem;
+}
+
+img.bloodstain {
+  position: absolute;
+  left: 0;
+  top: 950px;
+  z-index: -1;
+}
+
 
 .precious_index th h3 {
-	  font-weight: bold;
-	  font-size: 1em;
+	font-weight: bold;
+	font-size: 1em;
   text-align: left;
   color: black;
 }
@@ -94,6 +132,9 @@ a {
 }
 
 .precious_index {
+  border-collapse: separate;
+  border-spacing: 5px;
+  position: relative;
 	text-align: left;
 	overflow: hidden;
 	width: 80%;

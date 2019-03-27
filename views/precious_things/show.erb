@@ -1,14 +1,16 @@
-<div class="precious_show">
-  <ul>
-    <il><h1><%= @all_precious_things.name %></h1></il>
+<br>
+<br>
 
-    <il>Description: <%= @all_precious_things.description  %></il>
-    <il>Stock: <%= @all_precious_things.stock_quantity %></il>
-    <il>Cost: <%= @all_precious_things.buying_cost %></il>
-    <il>Price: <%= @all_precious_things.selling_price  %></il>
+<div class="precious_show_wrapper">
+  <ul class="precious_show">
+    <il><h2 class="precious_head"><%= @all_precious_things.name %></h2></il>
+
+    <il>DESCRIPTION: <%= @all_precious_things.description  %></il>
+    <il>STOCK: <%= @all_precious_things.stock_quantity %></il>
+    <il>COST: <%= @all_precious_things.buying_cost %></il>
+    <il>PRICE: <%= @all_precious_things.selling_price  %></il>
 
     <il><a href="/a-local-shop/<%= @all_precious_things.id %>/edit">Change this precious</a></il>
-    <br>
     <il><form class="button" action="/a-local-shop/<%= @all_precious_things.id %>/delete" method="POST"><input type="submit" value="Delete"></form></il>
   </ul>
 <div>
