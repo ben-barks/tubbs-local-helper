@@ -1,3 +1,5 @@
+<br>
+<br>
 <div class="form_wrapper">
 <form class="form" method="post" action="/a-local-shop/<%= @all_precious_things.id %>">
   <label for="name-field">Name: </label>
@@ -7,7 +9,7 @@
   id="name-field"
   value="<%= @all_precious_things.name %>"
   />
-
+<br>
   <label for="description-field">Description: </label>
   <input
   type="text"
@@ -15,7 +17,7 @@
   id="description-field"
   value="<%= @all_precious_things.description %>"
   />
-
+<br>
   <label for="stock-field">Stock: </label>
   <input
   type="number"
@@ -23,7 +25,7 @@
   id="stock-field"
   value="<%= @all_precious_things.stock_quantity() %>"
   />
-
+<br>
   <label for="cost-field">Buying cost: </label>
   <input
   type="number"
@@ -31,7 +33,7 @@
   id="cost-field"
   value="<%= @all_precious_things.buying_cost() %>"
   />
-
+<br>
   <label for="price-field">Selling price: </label>
   <input
   type="number"
@@ -39,7 +41,7 @@
   id="price-field"
   value="<%= @all_precious_things.selling_price() %>"
   />
-
+<br>
   <label for="source_id-selection">Source: </label>
   <select name="source_id" id="source_id-selection">
   <option
@@ -55,6 +57,7 @@
   <%= "selected" if @all_precious_things.source_id == 3 %>
   >Royston Vasey new road dig site</option>
 </select>
+<br>
 
 
   <input type='submit' value="Change this precious">

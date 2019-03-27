@@ -1,36 +1,34 @@
 <div id="new">
   <h1> Edward fetched a new precious! </h1>
 
-  <div class="form">
-    <form action="/a-local-shop" method="post">
-      <fieldset>
-      <label for="name"><legend>Precious thing:</legend></label>
+  <div class="new_form_wrapper">
+    <form class="new_form" action="/a-local-shop" method="post">
+      <label for="name">Precious thing:</label>
         <input type="text" name="name" id="name" placeholder="what shall we call it?">
-
-        <label for="description"><legend>Description: </legend></label>
+<br>
+        <label for="description">Description: </label>
              <input type="text" name="description" id="description" placeholder="what's it like?"/>
-
-             <label for="stock-quantity"><legend>Stock: </legend></label>
+<br>
+             <label for="stock-quantity">Stock: </label>
              <input type="number" name="stock_quantity" id="stock_quantity" placeholder="how many?"/>
-
-             <label for="buying-cost"><legend>Buying cost: </legend></label>
+<br>
+             <label for="buying-cost">Buying cost: </label>
              <input type="number" name="buying_cost" id="buying_cost" placeholder="how many died for it?"/>
-
-             <label for="selling-price"><legend>Selling price: </legend></label>
+<br>
+             <label for="selling-price">Selling price: </label>
              <input type="number" name="selling_price" id="selling_price" placeholder="how much is it?"/>
-
+<br>
              <label for="source-id">
-               <legend>Source: </legend>
+               Source:
                <select class="dropdown" name="source_id" id="source">
                  <% for source in @all_sources %>
                  <option value="<%= source.id %>"><%= source.name %></option>
                  <% end %>
                </select>
              </label>
-             <br>
-             <br>
+<br>
              <input type="submit" value="Make precious">
-             </fieldset>
+
            </form>
          </div>
         </div>
