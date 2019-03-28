@@ -226,7 +226,7 @@ img.bloodstain {
 	        box-shadow: 0 6px 6px -6px #a3a6b1;
 }
 
-.precious_index td:hover {
+.precious_index > tbody > tr > td:nth-child(1):hover {
   background-color: #e9eefe;
   color: #171719;
   font-weight: bold;
