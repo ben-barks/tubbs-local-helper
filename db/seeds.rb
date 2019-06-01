@@ -1,6 +1,5 @@
 require_relative('../models/precious_thing.rb')
 require_relative('../models/source.rb')
-require('pry')
 
 Source.delete_all()
 PreciousThing.delete_all()
@@ -155,6 +154,3 @@ precious_thing10.save()
 precious_thing11.save()
 precious_thing12.save()
 precious_thing13.save()
-
-binding.pry
-nil
